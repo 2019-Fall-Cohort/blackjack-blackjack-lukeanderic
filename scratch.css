@@ -1,0 +1,61 @@
+.card {
+    box-sizing:border-box;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+     width:100px;
+     height: 140px;
+     margin: 5px;
+     border: solid ;
+     border-color: #000000;
+     padding: 10px;
+     border-radius: 10%;
+     background-image: linear-gradient(to top, rgba(20, 13, 13, 0.651) 0%, rgb(109, 5, 14) 100%);
+     box-shadow: 12px 12px 2px 1px rgba(4, 37, 17, 0.2);}
+     
+     
+   }
+   
+   .container{
+     display: flex;
+     flex-direction: row;
+     
+   }
+   
+   .hand {
+    background-color: green;
+     display: flex;
+     justify-content: center;
+     margin: auto;
+     border: 5px, solid ;
+     border-color: #000000;
+     padding: 20px;
+     border-radius: 1.0;
+     
+   }
+
+   .medallion {
+     
+    width:50px;
+     height: 70px;
+     margin: 5px;
+     border: solid ;
+     border-color: #000000;
+     padding: 10px;
+     border-radius: 50%;
+     background-color: lightyellow;
+        
+
+   }
+   
+   
+   /* .card {
+     background-color: var(--light);
+     border-radius: 0.5rem;
+     display: flex;
+     height: 8rem;
+     margin: 0.5rem;
+     padding: 1rem;
+     width: 6rem;
+   }
+    */
