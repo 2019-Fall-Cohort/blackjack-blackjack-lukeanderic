@@ -23,7 +23,7 @@ generateCard(card) {
 
   },
 
-  renderCard(cardsArray, containerElement) {
+  renderCards(cardsArray, containerElement) {
     cardsArray.forEach(card => {
       containerElement.append(this.generateCard(card));
     })

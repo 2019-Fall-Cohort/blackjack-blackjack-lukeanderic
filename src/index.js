@@ -38,12 +38,12 @@ const dealerHand = singleDeckGame.getDealerHand();
   hitButton.addEventListener("click", () => {
       console.log("hit a card")
       singleDeckGame.hitUser();
-      singleDeckGame.evaluateUser();
+      
       document.querySelector(".user-hand").innerHTML = "";
-      Dom.renderCard(
-          singleDeckGame.getUserHand().getCards(),
-          document.querySelector(".user-hand")
-          )
+      Dom.renderCards(
+      singleDeckGame.getUserHand().getCards(),
+      document.querySelector(".user-hand"))
+      singleDeckGame.evaluateUser();
           
 })
   
@@ -61,7 +61,7 @@ const dealerHand = singleDeckGame.getDealerHand();
       console.log("double")
       singleDeckGame.hitUser();
       singleDeckGame.evaluateUser();
-      Dom.renderCard(cardsArray, containerElement)
+      Dom.renderCards(cardsArray, containerElement)
       singleDeckGame.getUserHand().getCards(),
       document.querySelector(".user-hand")
       const actionsBox = document.querySelector("actions__round")
@@ -103,6 +103,8 @@ const dealerHand = singleDeckGame.getDealerHand();
       userCards.remove()
 
   })
+
+
 
 Dom.displayChips(singleDeckGame)
 
