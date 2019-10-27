@@ -52,7 +52,7 @@ singleDeckGame.deal();
     Dom.renderCards(
       singleDeckGame.getDealerHand().getCards(), dealerHand
     )
-
+    
     singleDeckGame.evaluateDealer()
 
     const outcome = document.querySelector(".outcome")
@@ -65,6 +65,8 @@ singleDeckGame.deal();
     const span = document.createElement("span")
     span.classList.add(".win")
     won.textContent = win
+
+  
     
 
     //const chips = document.querySelector(".chips");
@@ -90,15 +92,10 @@ singleDeckGame.deal();
     }
       stayButton.addEventListener("click", () => {
       console.log("stay");
-      
-      
-    
-
-          
       })
+      
     }
-  }
-
+  
 //removes all cards
 
   const dealButton = document.querySelector(".actions__deal");
