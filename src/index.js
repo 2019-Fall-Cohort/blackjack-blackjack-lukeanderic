@@ -42,20 +42,62 @@ singleDeckGame.deal();
    
   const stayButton = document.querySelector(".actions__stay");
 
-  //this may get wiped out in Eric's latest push
-  
+  stand(singleDeckGame, Result) {
+    singleDeckGame.standUser()
+    singleDeckGame.evaluateUser()
+    Dom.disableActionButtons("true");
+    singleDeckGame.settleDealerHand();
+    const dealerHand = document.querySelector(".dealer-hand")
+    dealerHand.innerHTML = ""
+    Dom.renderCards(
+      singleDeckGame.getDealerHand().getCards(), dealerHand
+    )
+
+    singleDeckGame.evaluateDealer()
+
+    const outcome = document.querySelector(".outcome")
+    const win = singleDeckGame.outcome(WIN)
+    const loss = singleDeckGame.outcome(LOSS)
+    const push = singleDeckGame.outcome(PUSH)
+    const won = document.querySelector(".win")
+    const lose = document.querySelector(".lose")
+    const draw = document.querySelector(".push")
+    const span = document.createElement("span")
+    span.classList.add(".win")
+    won.textContent = win
+    
+
+    //const chips = document.querySelector(".chips");
+    // const span = document.createElement("span");
+    // span.classList.add("chips");
+    // chips.textContent = singleDeckGame.getUserChips();
+
+    switch (singleDeckGame.outcome()) {
+      case Result.WIN:
+        singleDeckGame.userWin();
+        outcome.innerHTML += "You Win!!!";
+        win ++;
+        break;
+      case Result.PUSH:
+        outcome.innerHTML += "You Pushed :/";
+        push ++;
+        break;
+      case Result.LOSS:
+        outcome.innerHTML += "You Lost!"
+        loss++;
+        break;
+        
+    }
       stayButton.addEventListener("click", () => {
       console.log("stay");
-      Dom.disableActionButtons("true");
       
-      singleDeckGame.settleDealerHand();
-      const finalScore = singleDeckGame.outcome();
-      const dealer = singleDeckGame.evaluateDealer();
-      const user = singleDeckGame.evaluateUser();
-      if(dealer > user)
+      
+    
 
           
       })
+    }
+  }
 
 //removes all cards
 
