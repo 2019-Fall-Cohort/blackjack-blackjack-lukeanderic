@@ -1,0 +1,13 @@
+package Sparkies;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class LukeAndAlexApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(LukeAndAlexApplication.class, args);
+	}
+
+}
